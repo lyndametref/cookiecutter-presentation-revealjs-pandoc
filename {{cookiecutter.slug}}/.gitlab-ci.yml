@@ -1,0 +1,13 @@
+image:
+  name: pandoc/core
+  entrypoint: [""]
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+build:
+  script:
+    - ls
+    - pandoc -t revealjs --self-contained --toc --toc-depth=1 --variable theme="{{cookiecutter.theme}}" --variable revealjs-url="./reveal.js" -o {{cookiecutter.slug}}.html {{cookiecutter.slug}}.md
+    - ls
+  artifacts:
+    paths:
+      - {{cookiecutter.slug}}.html

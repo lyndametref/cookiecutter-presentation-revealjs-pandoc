@@ -1,0 +1,9 @@
+{
+    "title": "Test",
+    "author": "Your Name",
+    "event": "",
+    "event_date": "",
+    "slug": "{{ cookiecutter.title.lower().replace(' ', '_') }}",
+    "theme": "white",
+    "revealjs_version":"master"
+}
